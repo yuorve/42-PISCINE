@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 21:10:11 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/15 21:23:51 by yoropeza         ###   ########.fr       */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str)
+int ft_sqrt(int nb)
 {
 	int	i;
+    int r;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+    i = 1;
+    r = 0;
+    while (r < nb)
+    {
+        i++;
+        r = i * i;
+    }
+    if (r == nb)
+        return (i);
+    else
+        return (0);
 }

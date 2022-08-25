@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 21:10:11 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/15 21:23:51 by yoropeza         ###   ########.fr       */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str)
+int ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+    if (nb > 0)
+        return (ft_recursive_factorial(nb - 1) * nb);
+    else if (nb == 0)
+        return (1);
+    else
+        return (0);
 }

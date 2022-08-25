@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -22,12 +20,4 @@ int	ft_strlen(char *str)
 		i++;
 	}
 	return (i);
-}
-
-int	main(void)
-{
-	int	c;
-
-	c = ft_strlen("Holas") + 48;
-	write(1, &c, 1);
 }

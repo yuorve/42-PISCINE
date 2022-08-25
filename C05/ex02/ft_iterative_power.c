@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 21:10:11 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/15 21:23:51 by yoropeza         ###   ########.fr       */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str)
+int ft_iterative_power(int nb, int power)
 {
-	int	i;
+    int r;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+    r = nb;
+    if (power > 0)
+        while (power > 1)
+        {            
+            r = r * nb;
+            power--;
+        }
+    else if (nb == 0 && power == 0)
+        return (1);
+    else
+        return (0);
+    return (r);
 }

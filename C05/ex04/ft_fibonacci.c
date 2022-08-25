@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 21:10:11 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/15 21:23:51 by yoropeza         ###   ########.fr       */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str)
+int ft_fibonacci(int index)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	if (index > 1)
+        return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+    else
+        return (index);
 }

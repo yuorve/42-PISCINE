@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 21:10:11 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/15 21:23:51 by yoropeza         ###   ########.fr       */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
@@ -19,5 +21,18 @@ void	ft_putstr(char *str)
 	{
 		write(1, &str[i], 1);
 		i++;
+	}
+}
+
+int	main(int argv, char **argc)
+{
+	int i;
+
+	i = argv - 1;
+	while (i > 0)
+	{
+		ft_putstr(argc[i]);
+		write(1, "\n", 1);
+		i--;
 	}
 }

@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/16 18:17:32 by yoropeza          #+#    #+#             */
+/*   Updated: 2022/08/17 19:50:58 by yoropeza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int ft_atoi (char *str)
 {
@@ -19,17 +29,10 @@ int ft_atoi (char *str)
 			negative = -negative;
 		else if (str[i] == '+')
 			negative = +negative;
-		else if (str[i] != ' ')
-			return (negative *  number);
+		else if (!(str[i] == ' ' || str[i] == '\t' || str[i] == '\f' ||
+			str[i] == '\r' || str[i] == '\n' || str[i] == '\v'))
+			return (negative * number);
 		i++;
 	}
 	return (negative * number);
-}
-
-int	main(void)
-{
-	int n;
-    
-	n = ft_atoi("   --+-1234ab567");
-	printf("El resultado: %d", n);
 }
