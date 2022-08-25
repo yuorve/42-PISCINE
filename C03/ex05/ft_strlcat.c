@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 unsigned int	ft_strlcat(char *dest, char *scr, unsigned int size)
 {
 	unsigned int	i;

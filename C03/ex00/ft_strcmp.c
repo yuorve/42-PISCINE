@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -19,27 +17,9 @@ int	ft_strcmp(char *s1, char *s2)
 	i = 0;
 	while (s1[i] || s2[i])
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		if (s1[i] > s2[i])
-			return (1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (0);
-}
-
-int	main(void)
-{
-	int		r;
-	char	c;
-
-	r = ft_strcmp("hola", "hola");
-	if (r < 0)
-	{
-		write(1, "-", 1);
-		r = -r;
-	}
-	c = r + '0';
-	write(1, &c, 1);
 	return (0);
 }
