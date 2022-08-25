@@ -15,12 +15,12 @@ int	ft_str_is_lowercase(char *str)
 	int	i;
 	int	r;
 
-	r = 0;
+	r = 1;
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] > 96 && str[i] < 123)
-			r = 1;
+		if (str[i] < 'a' || str[i] > 'z')
+			r = 0;
 		i++;
 	}
 	return (r);

@@ -9,7 +9,6 @@
 /*   Updated: 2022/08/24 20:38:25 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -20,16 +19,9 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 65 || str[i] > 90)
+		if (str[i] < 'A' || str[i] > 'Z')
 			r = 0;
 		i++;
 	}
 	return (r);
-}
-
-int main(void)
-{
-	char c[9] = "HOLAMUNDO";
-
-	printf("%d", ft_str_is_uppercase(c));
 }
