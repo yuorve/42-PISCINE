@@ -6,7 +6,7 @@
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 16:15:09 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/24 20:13:25 by yoropeza         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:30:16 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strcapitalize(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] > 96 && str[i] < 123)
-			if (str[i - 1] < 48 || str[i - 1] > 122 || (str[i] > 57 && str[i] < 97))
+			if (str[i - 1] < 48 || str[i - 1] > 122	|| (str[i] > 57 && str[i] < 97))
 				str[i] = str[i] - 32;
 		i++;
 	}

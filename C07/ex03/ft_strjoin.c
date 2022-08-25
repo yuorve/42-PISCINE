@@ -44,20 +44,20 @@ char *ft_strjoin(int size, char **strs, char *sep)
 	int		len;
 	char	*tab;
 
-    if (size == 0)
-    {
-        tab = (char*)malloc(1);
-        return (tab);
-    }
+	if (size == 0)
+	{
+		tab = (char *)malloc(1);
+		return (tab);
+	}
 	len = 0;
-    while (i < size)
-    {
-        len += ft_strlen(strs[i]);
+	while (i < size)
+	{
+        len = len + ft_strlen(strs[i]);
         i++;
-    }
+	}
 	tab = (char *)malloc(sizeof(char) * len + 1);
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		tab = ft_strcpy(tab, strs[i]);
 		i++;

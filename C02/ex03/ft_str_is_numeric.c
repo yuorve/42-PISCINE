@@ -6,7 +6,7 @@
 /*   By: yoropeza <yoropeza@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 15:34:00 by yoropeza          #+#    #+#             */
-/*   Updated: 2022/08/23 20:24:30 by yoropeza         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:23:40 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -25,11 +25,4 @@ int	ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (r);
-}
-
-int main(void)
-{
-	char c[9] = "1234567";
-
-	printf("%d", ft_str_is_numeric(c));
 }

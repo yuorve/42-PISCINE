@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi (char *str)
+int ft_atoi(char *str)
 {
 	int	i;
 	int	number;
 	int	negative;
-    
+
 	i = 0;
 	number = 0;
 	negative = 1;
@@ -29,8 +29,7 @@ int ft_atoi (char *str)
 			negative = -negative;
 		else if (str[i] == '+')
 			negative = +negative;
-		else if (!(str[i] == ' ' || str[i] == '\t' || str[i] == '\f' ||
-			str[i] == '\r' || str[i] == '\n' || str[i] == '\v'))
+		else if (!(str[i] == ' ' || str[i] == '\t' || str[i] == '\f' || str[i] == '\r' || str[i] == '\n' || str[i] == '\v'))
 			return (negative * number);
 		i++;
 	}
