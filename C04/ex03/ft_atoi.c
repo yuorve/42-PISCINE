@@ -29,7 +29,7 @@ int ft_atoi(char *str)
 			negative = -negative;
 		else if (str[i] == '+')
 			negative = +negative;
-		else if (!(str[i] == ' ' || str[i] == '\t' || str[i] == '\f' || str[i] == '\r' || str[i] == '\n' || str[i] == '\v'))
+		else if (!((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
 			return (negative * number);
 		i++;
 	}
