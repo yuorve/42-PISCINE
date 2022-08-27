@@ -19,19 +19,16 @@ int ft_atoi(char *str)
 	i = 0;
 	number = 0;
 	negative = 1;
-	while (str[i])
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str== '-')
+		negative *= -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-		{
-			number = number * 10 + (str[i] - '0');
-		}
-		else if (str[i] == '-')
-			negative = -negative;
-		else if (str[i] == '+')
-			negative = +negative;
-		else if (!((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
-			return (negative * number);
-		i++;
+		number = number * 10 + (str[i] - '0');
+		str++;
 	}
-	return (negative * number);
+	return (number * negative);
 }
