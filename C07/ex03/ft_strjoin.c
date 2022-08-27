@@ -34,7 +34,7 @@ char	*ft_strcpy(char *dest, char *scr)
 		dest[i] = scr[i];
 		i++;
 	}
-	dest = scr;
+	dest = '\0';
 	return (dest);
 }
 
