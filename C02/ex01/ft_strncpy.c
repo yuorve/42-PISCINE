@@ -20,7 +20,7 @@ char	*ft_strncpy(char *dest, char *scr, unsigned int n)
 		dest[i] = scr[i];
 		i++;
 	}
-	if (i < n && src[i] == '\0')
+	if (i < n)
 	{
 		while (dest[i] != '\0')
 		{
