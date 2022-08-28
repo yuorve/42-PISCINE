@@ -20,13 +20,10 @@ char	*ft_strncpy(char *dest, char *scr, unsigned int n)
 		dest[i] = scr[i];
 		i++;
 	}
-	if (i < n)
+	while (i < n)
 	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = '\0';
-			++i;
-		}
+		dest[i] = '\0';
+		++i;
 	}
 	return (dest);
 }
