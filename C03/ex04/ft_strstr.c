@@ -26,7 +26,7 @@ char	*ft_strstr(char *str, char *to_find)
 			if (str[i + j] == to_find[j])
 				j++;
 			else
-				break; 
+				break;
 		}
 		if (to_find[j] == '\0')
 			return (str + i);
