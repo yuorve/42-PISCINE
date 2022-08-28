@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
 	int	number;
@@ -23,7 +23,7 @@ int ft_atoi(char *str)
 		str++;
 	while (*str == '-' || *str == '+')
 	{
-		if (*str== '-')
+		if (*str == '-')
 			negative *= -1;
 		str++;
 	}
