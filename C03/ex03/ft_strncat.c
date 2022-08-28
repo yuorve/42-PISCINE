@@ -9,6 +9,8 @@
 /*   Updated: 2022/08/27 15:12:08 by yoropeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -26,4 +28,18 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	}
 	dest[i + j] = '\0';
 	return (dest);
+}
+
+int main(int argv, char **argc)
+{
+	char *mine;
+	char *theirs;
+
+	if (argv == 3)
+	{
+		mine = ft_strncat(argc[1], argc[2], argc[3]);
+		theirs = strncat(argc[1], argc[2], argc[3]);
+		printf("Mi resultado :%s:\nEl suyo :%s:\n", mine, theirs);
+	}
+	return (0);
 }
