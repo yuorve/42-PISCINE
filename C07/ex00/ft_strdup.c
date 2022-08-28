@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -17,27 +19,35 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	while (*str++)
 		i++;
-	}
 	return (i);
 }
 
 char *ft_strdup(char *src)
 {
-	int		i;
-	int		len;
 	char	*tab;
+	int		i;
 
-	len = ft_strlen(src);
-	tab = malloc(sizeof(*tab) * (len + 1));
 	i = 0;
-	while (i < len)
-	{
-		tab[i] = src[i];
-		i++;
-	}
+	if (!(tab = (char*)malloc(sizeof(char) * (ft_strlen(src) + 1))))
+		return NULL;
+	while (*src)
+		tab[i++] = *src++;
 	tab[i] = '\0';
 	return (tab);
+}
+
+int main(int argv, char **argc)
+{
+	char *mine;
+	char *theirs;
+
+	if (argv == 2)
+	{
+		mine = ft_strdup(argc[1]);
+		theirs = strdup(argc[1]);
+		printf("Resultado mio   :%s:\nResultado ellos :%s:\n", mine, theirs);
+	}
+	return (0);
 }
