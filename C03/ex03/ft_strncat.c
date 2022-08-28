@@ -37,9 +37,9 @@ int main(int argv, char **argc)
 
 	if (argv == 3)
 	{
-		mine = ft_strncat(argc[1], argc[2], argc[3]);
-		theirs = strncat(argc[1], argc[2], argc[3]);
-		printf("Mi resultado :%s:\nEl suyo :%s:\n", mine, theirs);
+		mine = ft_strncat(argc[1], argc[2], 5);
+		theirs = strncat(argc[1], argc[2], 5);
+		printf(":%s:\n:%s:\n", mine, theirs);
 	}
 	return (0);
 }
