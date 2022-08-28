@@ -24,6 +24,10 @@ unsigned int	ft_strlcpy(char *dest, char *scr, unsigned int size)
 		dest[i] = scr[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		++i;
+	}
 	return (len);
 }
