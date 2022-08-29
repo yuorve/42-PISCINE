@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
 	int	i;
-    int r;
+	int	r;
 
-    i = 1;
-    r = 0;
-    while (r < nb)
-    {
-        i++;
-        r = i * i;
-    }
-    if (r == nb)
-        return (i);
-    else
-        return (0);
+	i = 1;
+	r = 0;
+	while (r < nb)
+	{
+		i++;
+		r = i * i;
+	}
+	if (r == nb)
+		return (i);
+	else
+		return (0);
 }

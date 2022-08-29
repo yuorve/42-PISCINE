@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
-    int r;
+	int	r;
 
-    r = nb;
-    if (nb > 0)
-        while (nb > 1)
-        {
-            nb--;
-            r = r * nb;
-        }
-    else if (nb == 0)
-        return (1);
-    else
-        return (0);
-    return (r);
+	r = nb;
+	if (nb > 0)
+		while (nb > 1)
+		{
+			nb--;
+			r = r * nb;
+		}
+	else if (nb == 0)
+		return (1);
+	else
+		return (0);
+	return (r);
 }
