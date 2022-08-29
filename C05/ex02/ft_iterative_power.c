@@ -10,17 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_power(int nb, int power)
+int	ft_iterative_power(int nb, int power)
 {
-	int r;
+	int	r;
 
 	r = nb;
 	if (power > 0)
+	{
 		while (power > 1)
 		{
 			r = r * nb;
 			power--;
 		}
+	}
 	else if (nb == 0 && power == 0)
 		return (1);
 	else
