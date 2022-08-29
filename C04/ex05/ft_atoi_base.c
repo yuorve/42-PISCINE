@@ -61,9 +61,7 @@ int	ft_atoi_base(char *str, char *base)
 
 	size_base = ft_check_base(base);
 	if ((size_base) == 0)
-	{
 		return (0);
-	}
 	else
 	{
 		i = 0;
