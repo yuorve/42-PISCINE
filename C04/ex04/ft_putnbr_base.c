@@ -56,7 +56,8 @@ void	ft_putnbr_base(int nbr, char *base)
 {
 	int	size_base;
 
-	if ((size_base = ft_check_base(base)) == 0)
+	size_base = ft_check_base(base);
+	if (size_base == 0)
 	{
 		write(1, '\0', 1);
 	}
