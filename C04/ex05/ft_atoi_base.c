@@ -60,28 +60,28 @@ int	ft_atoi_base(char *str, char *base)
 	int	size_base;
 
 	if ((size_base = ft_check_base(base)) == 0)
-    {
+	{
 		return (0);
-    }
-	else 
-    {
+	}
+	else
+	{
 		i = 0;
 		number = 0;
 		negative = 1;
 		while (*str == 32 || (*str >= 9 && *str <= 13))
 			str++;
 		while (*str == '-' || *str == '+')
-        {
-            if (*str == '-')
-                negative *= -1;
-            str++;
-        }
-        while (*str >= '0' && *str <= '9')
-        {
-            number = number * size_base;
-            number = number + base[(str[i] - '0')];
-            str++;
-        }
-        return (number * negative);
-    }
+		{
+			if (*str == '-')
+				negative *= -1;
+			str++;
+		}
+		while (*str >= '0' && *str <= '9')
+		{
+			number = number * size_base;
+			number = number + base[(str[i] - '0')];
+			str++;
+		}
+		return (number * negative);
+	}
 }
