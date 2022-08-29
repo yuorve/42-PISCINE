@@ -30,26 +30,29 @@ int	ft_dup_char(char *base)
 		{
 			if (j != i && base[j] == base[i])
 				return (1);
+			j++;
 		}
+		i++;
 	}
 	return (0);
 }
 
 int	ft_check_base(char *base)
 {
-	int	len;
-
-	len = 0;
-	while (*base++)
-		len++;
+	int	i;
+	
+	i = 0;
 	if (ft_dup_char(base) == 1)
 		return (0);
 	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
-	while (*base++)
-		if (*base == '-' || *base == '+')
+	while (base[i])
+	{
+		if (base[i] == '-' || base[i] == '+')
 			return (0);
-	return (len);
+		i++;
+	}
+	return (i);
 }
 
 int	ft_atoi_base(char *str, char *base)
