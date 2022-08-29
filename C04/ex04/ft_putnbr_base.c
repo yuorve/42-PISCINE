@@ -40,7 +40,7 @@ int	ft_dup_char(char *base)
 int	ft_check_base(char *base)
 {
 	int	i;
-	
+
 	i = 0;
 	if (ft_dup_char(base) == 1)
 		return (0);
