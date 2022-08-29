@@ -24,7 +24,7 @@ int	ft_dup_char(char *base)
 
 	i = 0;
 	while (base[i] != '\0')
-    {
+	{
 		j = 0;
 		while (base[j] != '\0')
 		{
@@ -59,7 +59,8 @@ int	ft_atoi_base(char *str, char *base)
 	int	negative;
 	int	size_base;
 
-	if ((size_base = ft_check_base(base)) == 0)
+	size_base = ft_check_base(base);
+	if ((size_base) == 0)
 	{
 		return (0);
 	}
