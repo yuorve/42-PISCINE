@@ -66,8 +66,8 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	else if (nbr == -2147483648)
 	{
-		ft_putnbr_base(214748364 / size_base, base);
-		ft_putnbr_base(8 / size_base, base);
+		write(1, "-", 1);
+		ft_putnbr_base(2147483648 / size_base, base);
 	}
 	else if (nbr < 0)
 	{
