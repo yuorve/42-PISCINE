@@ -60,7 +60,7 @@ void	ft_sort_params(int nb, char **params)
 int	main(int argv, char **argc)
 {
 	int	i;
-	
+
 	ft_sort_params((argv - 1), argc);
 	i = 1;
 	while (i < argv)
