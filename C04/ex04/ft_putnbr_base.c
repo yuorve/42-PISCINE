@@ -43,7 +43,7 @@ int	ft_check_base(char *base)
 	while (*base++)
 		len++;
 	if (ft_dup_char(base) == 1)
-    	return (0);
+		return (0);
 	if (base[0] == '\0' || base[1] == '\0')
 		return (0);
 	while (*base++)
@@ -59,9 +59,9 @@ void	ft_putnbr_base(int nbr, char *base)
 	if ((size_base = ft_check_base(base)) == 0)
 	{
 		write(1, '\0', 1);
-    }
+	}
 	else if (nbr == -2147483648)
-	{        
+	{
 		ft_putnbr_base(214748364 / size_base, base);
 		ft_putnbr_base(8 / size_base, base);
 	}
@@ -75,6 +75,6 @@ void	ft_putnbr_base(int nbr, char *base)
 		ft_putnbr_base(nbr / size_base, base);
 		ft_putnbr_base(nbr % size_base, base);
 	}
-	else (nbr < 10)
+	else if (nbr < 10)
 		ft_putchar(nbr, base);
 }
