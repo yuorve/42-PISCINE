@@ -38,14 +38,14 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void ft_sort_params(int nb, char **params)
+void	ft_sort_params(int nb, char **params)
 {
 	int		i;
 	char	*swap;
 
 	i = 1;
-    while (i < nb)
-    {
+	while (i < nb)
+	{
 		if (ft_strcmp(params[i], params[i + 1]) > 0)
 		{
 			swap = params[i + 1];
@@ -55,15 +55,14 @@ void ft_sort_params(int nb, char **params)
 		}
 		i++;
 	}
-
 }
 
 int	main(int argv, char **argc)
 {
-	int i;
+	int	i;
 	
 	ft_sort_params((argv - 1), argc);
-    i = 1;
+	i = 1;
 	while (i < argv)
 	{
 		ft_putstr(argc[i]);
