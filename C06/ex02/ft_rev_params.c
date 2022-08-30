@@ -23,3 +23,16 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+
+int	main(int argv, char **argc)
+{
+	int	i;
+
+	i = argv - 1;
+	while (i > 0)
+	{
+		ft_putstr(argc[i]);
+		write(1, "\n", 1);
+		i--;
+	}
+}

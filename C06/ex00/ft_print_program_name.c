@@ -23,3 +23,11 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+
+int	main(int argv, char **argc)
+{
+	if (argv > -1)
+		ft_putstr(argc[0]);
+	write(1, "\n", 1);
+	return (0);
+}
