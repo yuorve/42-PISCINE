@@ -23,9 +23,9 @@ int	ft_iterative_power(int nb, int power)
 			power--;
 		}
 	}
-	else if (nb == 0 && power == 0)
+	else if (nb == 0 || power == 0)
 		return (1);
-	else
+	else 
 		return (0);
 	return (r);
 }
