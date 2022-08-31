@@ -37,7 +37,6 @@ unsigned int	ft_strlcat(char *dest, char *scr, unsigned int size)
 	len_s = ft_strlen(scr);
 	if (size == 0 || size <= i)
 		return (len_s + size);
-
 	while (scr[j] && j < size - len_d - 1)
 	{
 		dest[i] = scr[j];
