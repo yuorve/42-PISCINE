@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -24,30 +22,16 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	char	*tab;
 	int		i;
 
 	i = 0;
-	if (!(tab = (char*)malloc(sizeof(char) * (ft_strlen(src) + 1))))
-		return NULL;
+	if (!(tab = (char*) malloc(sizeof(char) * (ft_strlen(src) + 1))))
+		return ('\0');
 	while (*src)
 		tab[i++] = *src++;
 	tab[i] = '\0';
 	return (tab);
-}
-
-int main(int argv, char **argc)
-{
-	char *mine;
-	char *theirs;
-
-	if (argv == 2)
-	{
-		mine = ft_strdup(argc[1]);
-		theirs = strdup(argc[1]);
-		printf("Resultado mio   :%s:\nResultado ellos :%s:\n", mine, theirs);
-	}
-	return (0);
 }

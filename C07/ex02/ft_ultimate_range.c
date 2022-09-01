@@ -12,9 +12,9 @@
 
 #include <stdlib.h>
 
-int ft_ultimate_range(int **range, int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int i;
+	int	i;
 
 	if (min >= max)
 	{
@@ -23,7 +23,7 @@ int ft_ultimate_range(int **range, int min, int max)
 	}
 	if (!(*range = (int *)malloc(sizeof(int) * (max - min))))
 		return (-1);
-    i = 0;
+	i = 0;
 	while (min < max)
 	{
 		(*range)[i] = min;

@@ -12,20 +12,20 @@
 
 #include <stdlib.h>
 
-int	*ft_range(int min, int max)
+int    *ft_range(int min, int max)
 {
-	int	*tab;
-	int	i;
+    int    *tab;
+    int    i;
 
-	if (min >= max)
-		return (NULL);
-	tab = malloc(sizeof(*tab) * (max - min));
-	i = 0;
-	while (min < max)
-	{
-		tab[i] = min;
-		min++;
-		i++;
-	}
-	return (tab);
+    if (min >= max)
+        return (NULL);
+    tab = malloc(sizeof(*tab) * (max - min));
+    i = 0;
+    while (min < max)
+    {
+        tab[i] = min;
+        min++;
+        i++;
+    }
+    return (tab);
 }

@@ -26,7 +26,7 @@ int	ft_strlen(char *str)
 
 char	*ft_strcpy(char *dest, char *scr)
 {
-	int	i;	
+	int	i;
 
 	i = 0;
 	while (scr[i] != '\0')
@@ -38,7 +38,7 @@ char	*ft_strcpy(char *dest, char *scr)
 	return (dest);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		i;
 	int		len;
@@ -49,11 +49,12 @@ char *ft_strjoin(int size, char **strs, char *sep)
 		tab = (char *)malloc(1);
 		return (tab);
 	}
+	i = 0;
 	len = 0;
 	while (i < size)
 	{
-        len = len + ft_strlen(strs[i]);
-        i++;
+		len = len + ft_strlen(strs[i]);
+		i++;
 	}
 	tab = (char *)malloc(sizeof(char) * len + 1);
 	i = 0;
